@@ -1,2 +1,2 @@
-# yelp_clone
+# Yelp Clone
 Ruby on Rails Yelp Clone
