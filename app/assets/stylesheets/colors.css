@@ -1,0 +1,227 @@
+/*
+	Theme colors
+*/
+
+/* ==========================================================
+! Green
+========================================================== */
+body#green a,
+body#green .prop-price {
+	color: #5FB000;
+}
+body#green a:hover,
+body#green .home-blog-articles ul li a:hover {
+	color: #7DC328;
+}	
+body#green .btn-realto,
+body#green .btn-realto-form {
+    background: none repeat scroll 0 0 #5FB000;
+    border: 1px solid #559B00;
+    color: #fff;
+}
+body#green .btn-realto:hover,
+body#green .btn-realto-form:hover {
+	background: #69B909;
+	color: #fff;
+}
+body#green .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#green .dropdown-menu li > a,
+body#green .navbar .nav > .active > a, 
+body#green .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#green .select2-container .select2-choice,
+body#green a.brand {
+	color: #333333;
+}
+body#green .home-blog-articles ul li a {
+	color: #888;
+}
+body#green footer a {
+    color: #AAAAAA;
+}
+/* ==========================================================
+! Blue
+========================================================== */
+body#blue a,
+body#blue .prop-price {
+	color: #5896c7;
+}
+body#blue a:hover {
+	color: #73bce6;
+}	
+body#blue .btn-realto,
+body#blue .btn-realto-form {
+    background: none repeat scroll 0 0 #5896c7;
+    border: 1px solid #41709d;
+    color: #fff;
+}
+body#blue .btn-realto:hover,
+body#blue .btn-realto-form:hover {
+	background: #73bce6;
+	color: #fff;
+}
+body#blue .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#blue .dropdown-menu li > a,
+body#blue .navbar .nav > .active > a, 
+body#blue .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#blue .select2-container .select2-choice,
+body#blue a.brand {
+	color: #333333;
+}
+body#blue .home-blog-articles ul li a {
+	color: #888;
+}	
+body#blue footer a {
+    color: #AAAAAA;
+}
+/* ==========================================================
+! Red
+========================================================== */
+body#red a,
+body#red .prop-price {
+	color: #d23435;
+}
+body#red a:hover {
+	color: #ec4344;
+}	
+body#red .btn-realto,
+body#red .btn-realto-form {
+    background: none repeat scroll 0 0 #d23435;
+    border: 1px solid #D23435;
+    color: #fff;
+}
+body#red .btn-realto:hover,
+body#red .btn-realto-form:hover {
+	background: #af2829;
+	color: #fff;
+}
+body#red .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#red .dropdown-menu li > a,
+body#red .navbar .nav > .active > a, 
+body#red .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#red .select2-container .select2-choice,
+body#red a.brand {
+	color: #333333;
+}
+body#red .home-blog-articles ul li a {
+	color: #888;
+}
+body#red footer a {
+    color: #AAAAAA;
+}
+/* ==========================================================
+! Grey
+========================================================== */
+body#grey a,
+body#grey .prop-price {
+	color: #5e6872;
+}
+body#grey a:hover {
+	color: #798692;
+}	
+body#grey .btn-realto,
+body#grey .btn-realto-form {
+    background: none repeat scroll 0 0 #5e6872;
+    border: 1px solid #495159;
+    color: #fff;
+}
+body#grey .btn-realto:hover,
+body#grey .btn-realto-form:hover {
+	background: #798692;
+	color: #fff;
+}
+body#grey .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#grey .dropdown-menu li > a,
+body#grey .navbar .nav > .active > a, 
+body#grey .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#grey .select2-container .select2-choice,
+body#grey a.brand {
+	color: #333333;
+}
+body#grey .home-blog-articles ul li a {
+	color: #888;
+}	
+body#grey footer a {
+    color: #AAAAAA;
+}
+/* ==========================================================
+! Pink
+========================================================== */
+body#pink a,
+body#pink .prop-price {
+	color: #c0588d;
+}
+body#pink a:hover {
+	color: #e071b1;
+}	
+body#pink .btn-realto,
+body#pink .btn-realto-form {
+    background: none repeat scroll 0 0 #c0588d;
+    border: 1px solid #9b446e;
+    color: #fff;
+}
+body#pink .btn-realto:hover,
+body#pink .btn-realto-form:hover {
+	background: #e071b1;
+	color: #fff;
+}
+body#pink .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#pink .dropdown-menu li > a,
+body#pink .navbar .nav > .active > a, 
+body#pink .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#pink .select2-container .select2-choice,
+body#pink a.brand {
+	color: #333333;
+}
+body#pink .home-blog-articles ul li a {
+	color: #888;
+}
+body#pink footer a {
+    color: #AAAAAA;
+}
+/* ==========================================================
+! Orange
+========================================================== */
+body#orange a,
+body#orange .prop-price {
+	color: #e06216;
+}
+body#orange a:hover {
+	color: #f47e1c;
+}	
+body#orange .btn-realto,
+body#orange .btn-realto-form {
+    background: none repeat scroll 0 0 #e06216;
+    border: 1px solid #c04c11;
+    color: #fff;
+}
+body#orange .btn-realto:hover,
+body#orange .btn-realto-form:hover {
+	background: #f47e1c;
+	color: #fff;
+}
+body#orange .navbar .nav > li > a {
+    color: #EEEEEE;
+}
+body#orange .dropdown-menu li > a,
+body#orange .navbar .nav > .active > a, 
+body#orange .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+body#orange .select2-container .select2-choice,
+body#orange a.brand {
+	color: #333333;
+}
+body#orange .home-blog-articles ul li a {
+	color: #888;
+}
+body#orange footer a {
+    color: #AAAAAA;
+}
