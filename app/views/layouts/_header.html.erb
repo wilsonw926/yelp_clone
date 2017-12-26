@@ -31,7 +31,11 @@
           <span class="tag-line hidden-phone">Find Noms: Anytime & Anywhere</span>
         </div>
         <div class="span4">
-          <div class="phone-number pull-right"><i class="icon-envelope-alt pull-left"></i> Email Us: <strong>support@noms.com</strong></div><!--/email-address-->
+          <ul class="inline pull-right ">
+            <%= link_to "Sign in", new_user_session_path %>
+            &nbsp&nbsp&nbsp
+            <%= link_to "Sign up", new_user_registration_path %>
+          </ul>
         </div>
       </div>
     </div>
