@@ -27,14 +27,14 @@
     <div class="container">
       <div class="row">
         <div class="span8">
-          <a class="brand" href="index.html"><span class="logo-text">Noms</span></a>
+          <a class="brand"><span class="logo-text">Noms</span></a>
           <span class="tag-line hidden-phone">Find Noms: Anytime & Anywhere</span>
         </div>
         <div class="span4">
           <ul class="inline pull-right ">
-            <%= link_to "Sign in", new_user_session_path %>
+            <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %>
             &nbsp&nbsp&nbsp
-            <%= link_to "Sign up", new_user_registration_path %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary' %>
           </ul>
         </div>
       </div>

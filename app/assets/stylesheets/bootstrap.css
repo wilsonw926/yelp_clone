@@ -2033,12 +2033,12 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #006dcc;
+  background-color: #5FB000;
   background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(top, #5FB000, #5FB000);
+  background-image: -o-linear-gradient(top, #5FB000, #5FB000);
+  background-image: linear-gradient(to bottom, #5FB000, #5FB000);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -2050,7 +2050,11 @@ input[type="button"].btn-block {
 }
 .btn-primary:hover,
 .btn-primary:active,
-.btn-primary.active,
+.btn-primary.active {
+  color: #ffffff;
+  background-color: #5FB015;
+  border-color: #5FB015;
+}
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
