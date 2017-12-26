@@ -10,7 +10,11 @@
         </button>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="index.html"><i class="icon-home"></i></a></li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="icon-home"></i>
+              <%end%>
+            </li>
             <li><%= link_to "About Us", about_us_path%></li>
             <li><%= link_to "Contact Us", contact_us_path%></li>
           </ul>
