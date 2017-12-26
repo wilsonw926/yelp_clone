@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Find Noms: Anytime & Anywhere</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Find Noms: Anytime & Anywhere</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<%= render 'layouts/header'%>
 
-  <body>
-  	<%= render 'layouts/header'%>
-    <%= yield %>
-    <%= render 'layouts/footer'%>
-  </body>
+<div class="container">
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        <%= value %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+</div>
+    
+<%= yield %>
+<%= render 'layouts/footer'%>
+</body>
 </html>
