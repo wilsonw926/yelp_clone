@@ -397,23 +397,28 @@ a.overlay:hover .more {
 #home-search-container .row {
 	position: relative;
 }
+
 #home-search-container .widget {
 	margin-bottom: 0;
 }
+
 .head-container {
-	background: #fff; /* ie8 */
-	background: rgba(255,255,255,0.85);
-	border: 1px solid #fff;
+	/*background: #fff; 
+	background: rgba(255,255,255,0.85);*/
+	background-image: url("diningbackground.jpg");
+    background-size: 100%;
 }
+
 .head-container .search-form {
-	background: none;
 	border: none;
 }
+
 .search-form-wrapper {
 	position: absolute;
     right: 0;
     top: -620px;
     z-index: 9999;
+    background: #fff;
 }
 .search-form {
 	padding: 30px 30px 10px;
@@ -425,9 +430,10 @@ a.overlay:hover .more {
 	background: rgba(255,255,255,0.85);
 	border: 1px solid #fff;
 }
+
 .search-form > p {
 	font-size: 18px;
-    font-weight: 200;
+    font-weight: 300px;
     line-height: 22px;
     margin: 0 0 20px;
     text-transform: uppercase;
