@@ -9,14 +9,12 @@ class RestaurantsController < ApplicationController
 	end
 
 	def create
-		@restaurant = Restaurant.new
-		@restaurant.update(restaurant_params)
-		@restaurant.save
+		@restaurant = Restaurant.create(restaurant_params)
  		redirect_to @restaurant
 	end
 
 	def show
-
+		
 	end
 
 	private

@@ -1,21 +1,54 @@
-<%= form_for @restaurant do |f| %>
-	<%= f.label :name%>
-	<%= f.text_field :name%>
-	<%= f.label :description%>
-	<%= f.text_area :description%>
-	<%= f.label :address1%>
-	<%= f.text_field :address1%>
-	<%= f.label :address2%>
-	<%= f.text_field :address2%>
-	<%= f.label :city%>
-	<%= f.text_field :city%>
-	<%= f.label :state%>
-	<%= f.text_field :state%>
-	<%= f.label :zipcode%>
-	<%= f.text_field :zipcode%>
-	<%= f.label :phone%>
-	<%= f.text_field :phone%>
-	<%= f.label :email%>
-	<%= f.text_field :email%>
-	<%= f.submit %>
-<% end %>
+<div class="container page-content">
+  <div class="row">
+    <div class="span8">
+      <div class="box-container">
+        <div class="padding30">
+          <div class="white-box">
+          <h2 class="page-title">Write a Review</h2>
+
+            <%= form_for @restaurant do |f| %>
+              <%= f.label :name%>
+              <%= f.text_field :name%>
+              <%= f.label :description%>
+              <%= f.text_area :description%>
+              <%= f.label :address1%>
+              <%= f.text_field :address1%>
+              <%= f.label :address2%>
+              <%= f.text_field :address2%>
+              <%= f.label :city%>
+              <%= f.text_field :city%>
+              <%= f.label :state%>
+              <%= f.text_field :state%>
+              <%= f.label :zipcode%>
+              <%= f.text_field :zipcode%>
+              <%= f.label :phone%>
+              <%= f.text_field :phone%>
+              <%= f.label :email%>
+              <%= f.text_field :email%><br />
+              <%= f.submit class: "btn span3 btn-realto-form btn-large" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .span8 -->
+    <div class="span4 widget">
+
+      <div class="widget map box-container padding30">
+        <h3 class="widget-title">General Guidelines (From Yelp)</h3>
+          <dd class="margin0"><b>Inappropriate content:</b> There's no need for threats, harassment, lewdness, hate speech, and other displays of bigotry.</dd>
+          <dd class="margin0"><b>Conflicts of interest:</b> Your contributions should be unbiased and objective. Business owners should not ask customers to write reviews.</dd>
+          <dd class="margin0"><b>Promotional content:</b> Unless you're using your Business Owners Account to add content to your business's profile page, we generally frown upon promotional content. Let's keep the site useful for consumers and not overrun with commercial noise from every user.</dd>
+          <dd class="margin0"><b>Relevance:</b> Please make sure your contributions are relevant and appropriate to the forum. For example, reviews aren't the place for rants about a business's employment practices, political ideologies, extraordinary circumstances, or other matters that don't address the core of the consumer experience.</dd>
+          <dd class="margin0"><b>Privacy:</b> Don’t publicize other people’s private information. Please don’t post close-up photos or videos of other patrons without their permission, and please don’t post other people’s full names unless you’re referring to service providers who are commonly identified by or commonly share their own full names.</dd>
+          <dd class="margin0"><b>Intellectual property:</b> Don’t swipe content from other sites or users. Write your own reviews and take your own photos and videos, please!</dd>
+          <dd class="margin0"><b>Demanding payment:</b> Beyond simply asking for a refund to remedy a bad experience, you should not use removing or posting your review as a way to extract payment from a business.</dd>
+        </dl>
+      </div>
+      </div>
+    </div>
+    <!-- .span4 -->
+  </div>
+  <!-- .row -->
+</div>
+<!-- .container -->
