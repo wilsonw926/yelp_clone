@@ -6,7 +6,7 @@
           <div class="white-box">
           <h2 class="page-title">Write a Review</h2>
 
-            <%= form_for @restaurant do |f| %>
+            <%= form_for :restaurants do |f| %>
               <%= f.label :name%>
               <%= f.text_field :name%>
               <%= f.label :description%>
