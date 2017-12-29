@@ -8,11 +8,11 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
