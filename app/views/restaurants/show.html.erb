@@ -29,11 +29,9 @@
                 <span class="qty pull-right"><%= @restaurant.email %></span></li>
               <li class="info-label clearfix"><span class="pull-left">Address:</span>
                 <span class="qty pull-right">
-                  <%= @restaurant.address1 %><br />
-                  <%= @restaurant.address2 %><br />
-                  <%= @restaurant.city %><br />
-                  <%= @restaurant.state %><br />
-                  <%= @restaurant.zipcode %><br />
+                  <div align="right"><%= @restaurant.address1 %></div>
+                  <div align="right"><%= @restaurant.address2 %></div>
+                  <div align="right"><%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></div>
                 </span>
               </li>
             </ul>
