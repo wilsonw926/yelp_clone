@@ -39,7 +39,11 @@
             </ul>
           </div>
           <div class="clearfix padding30">
+            <%= link_to "Write a Review", new_restaurant_review_path(@restaurant), class: "btn btn-small btn-realto"%>
             <h3>Reviews</h3>
+            <% @reviews.each do |review| %>
+              <%= review.comment %>
+            <%end%>
             <p>No Reviews Yet</p>
           </div>
         </div>
