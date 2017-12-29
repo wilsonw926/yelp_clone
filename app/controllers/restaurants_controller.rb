@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-    
+  before_action :authenticate_user!, only: [:create, :new]
   def index
     
   end
@@ -10,8 +10,13 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    @restaurant.save
-    redirect_to @restaurant
+    if @restaurant.save
+      flash['success'] = 'Review has been created succesfully.'
+      redirect_to @restaurant
+    else
+      flash[:error] = @restaurant.errors.full_messages.to_sentence
+      redirect_to new_restaurant_path
+    end
   end
 
   def show
