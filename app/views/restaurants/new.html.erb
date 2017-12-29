@@ -10,7 +10,8 @@
               <%= f.label :name%>
               <%= f.text_field :name%>
               <%= f.label :description%>
-              <%= f.text_area :description%>
+              <%= f.text_area :description%><br />
+              <%= f.select :category_id, Category.all.map{ |f| [f.name, f.id]}%>
               <%= f.label :address1%>
               <%= f.text_field :address1%>
               <%= f.label :address2%>
