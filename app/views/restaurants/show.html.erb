@@ -41,10 +41,31 @@
           <div class="clearfix padding30">
             <%= link_to "Write a Review", new_restaurant_review_path(@restaurant), class: "btn btn-small btn-realto"%>
             <h3>Reviews</h3>
-            <% @reviews.each do |review| %>
-              <%= review.comment %>
-            <%end%>
-            <p>No Reviews Yet</p>
+            <% if @reviews.blank?%>
+              <p>No Reviews Yet</p>
+            <%else%>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="col-mid-3"></th>
+                    <th class="col-mid-9"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @reviews.each do |review| %>
+                  <tr>
+                    <td>
+                      <h5><%= "#{review.user.email}" %></h5>
+                    </td>
+                    <td>
+                      <div class="clearfix star-rating"><%= review.rating %> stars</div>
+                      <%= review.comment %>
+                    </td>
+                  </tr>
+                  <%end%>
+                </tbody>
+              </table>
+            <% end %>
           </div>
         </div>
       </div>
