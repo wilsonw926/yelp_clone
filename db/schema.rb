@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229041921) do
+ActiveRecord::Schema.define(version: 20171229064656) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20171229041921) do
   create_table "reviews", force: :cascade do |t|
     t.string "comment"
     t.integer "rating"
+    t.integer "restaurant_id"
+    t.integer "user_id"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
