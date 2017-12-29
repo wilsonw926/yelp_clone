@@ -30,7 +30,6 @@
               <li class="info-label clearfix"><span class="pull-left">Address:</span>
                 <span class="qty pull-right">
                   <div align="right"><%= @restaurant.address1 %></div>
-                  <div align="right"><%= @restaurant.address2 %></div>
                   <div align="right"><%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></div>
                 </span>
               </li>
@@ -53,7 +52,7 @@
                   <% @reviews.each do |review| %>
                   <tr>
                     <td>
-                      <h5><%= "#{review.user.email}" %></h5>
+                      <h5><%= "#{review.user.first_name} #{review.user.last_name}" %></h5>
                     </td>
                     <td>
                       <div class="clearfix star-rating"><%= review.rating %> stars</div>

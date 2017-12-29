@@ -34,9 +34,14 @@
         </div>
         <div class="span4">
           <ul class="inline pull-right ">
-            <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %>
-            &nbsp&nbsp&nbsp
-            <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary' %>
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-primary', method: :delete) %>
+              &nbsp&nbsp&nbsp
+            <% else %>
+              <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %>
+              &nbsp&nbsp&nbsp
+              <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary' %>
+            <% end %>
           </ul>
         </div>
       </div>
