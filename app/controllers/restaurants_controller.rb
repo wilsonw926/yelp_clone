@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
-  
+    
   def index
-    @restaurant = Restaurant.all
+    
   end
 
   def new
@@ -10,22 +10,16 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.create(restaurant_params)
-    if @restaurant.save
-      flash['success'] = 'Review has been created succesfully.'
-      redirect_to @restaurant
-    else
-      flash.now['danger'] = 'There was a problem with your review.'
-      render 'new'
-    end
+    redirect_to @restaurant
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    
   end
 
   private
     def restaurant_params
-      params.require(:restaurants).permit(:name, :description, :address1, :address2,
+      params.require(:restaurant).permit(:name, :description, :address1, :address2,
                          :city, :state, :zipcode, :phone, :email)
     end
 
