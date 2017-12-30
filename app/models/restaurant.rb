@@ -14,4 +14,11 @@ class Restaurant < ApplicationRecord
 		[address1, address2, city, state, zipcode].join(', ')
 	end
 
+	def self.search(params)
+		restaurants = Restaurant.all
+		restaurants = restaurants.where("name like ? or description like ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+		restaurants = restaurants.near(params[:location], 20) if params[:location].present?
+		return restaurants
+	end
+
 end

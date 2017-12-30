@@ -12,67 +12,18 @@
                   Never eat at a bad restaurant again!</p>
                   <%= link_to "Write a Review", new_restaurant_path, class: "btn btn-large btn-realto span3 header-cta"%>
                 </div>
-                <div class="span4">
+                <div class="span4" style="padding-bottom: 60px;">
                   <div class="search-form">
                     <p>Find a Great Restaurant</p>
-                    <form action="#" class="row-fluid" method="post" />
-                      <select class="span12 select" name="type">
-                        <option />Location
-                        <option value="#" />New York
-                        <option value="#" />Los Angeles
-                        <option value="#" />Washington
-                        <option value="#" />Chicago
-                        <option value="#" />Miami
-                      </select>
-                      <select class="span12 select" name="type">
-                        <option />Property Type
-                        <option value="#" />Any
-                        <option value="#" />Single Family Home
-                        <option value="#" />Condo
-                        <option value="#" />Apartment
-                        <option value="#" />Loft
-                      </select>
-                      <select class="span6 select pull-left" name="beds">
-                        <option />Beds
-                        <option value="#" />1+ Beds
-                        <option value="#" />2+ Beds
-                        <option value="#" />3+ Beds
-                        <option value="#" />4+ Beds
-                        <option value="#" />5+ Beds
-                      </select>
-                      <select class="span6 select pull-right" name="baths">
-                        <option />Baths
-                        <option value="#" />1+ Baths
-                        <option value="#" />2+ Baths
-                        <option value="#" />3+ Baths
-                        <option value="#" />4+ Baths
-                        <option value="#" />5+ Baths
-                      </select>
-                      <select class="span12 select clearfix" name="status">
-                        <option />Select Status
-                        <option value="#" />For Rent
-                        <option value="#" />For Sale
-                      </select>
-                      <select class="span6 select pull-left" name="price-from">
-                        <option />Price from
-                        <option value="#" />from $100.000
-                        <option value="#" />from $200.000
-                        <option value="#" />from $300.000
-                        <option value="#" />from $400.000
-                        <option value="#" />from $500.000
-                      </select>
-                      <select class="span6 select pull-right" name="price-to">
-                        <option />Price to
-                        <option value="#" />to $100.000
-                        <option value="#" />to $200.000
-                        <option value="#" />to $300.000
-                        <option value="#" />to $400.000
-                        <option value="#" />to $500.000
-                      </select>
-                      <div class="clearfix">
-                        <button class="btn pull-right span6 btn-realto-form btn-large" type="submit">Search</button>
-                      </div>
-                    </form>
+                    <%= form_tag search_restaurants_path, method: :get do |f| %>
+                      <p>Keywords</p>
+                      <%= text_field_tag :search, nil, placeholder: "Steaks, Burgers, Hot Dogs, etc." %>
+                      <p>Location</p>
+                      <%= text_field_tag :location, nil, placeholder: "Berkeley, Miami, etc." %>
+                      <p>Category</p>
+                      <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+                      <%= submit_tag 'Search', class: "btn span2 btn-realto-form btn-large" %>
+                    <%end%>
                   </div>
                   <!-- .search-form -->   
                 </div>

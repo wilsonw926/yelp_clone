@@ -29,6 +29,10 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def search
+    @restaurants = Restaurant.search(params)
+  end
+
   private
     def restaurant_params
       params.require(:restaurant).permit(:name, :description, :category_id, :address1, :address2,

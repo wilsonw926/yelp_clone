@@ -418,6 +418,7 @@ a.overlay:hover .more {
 
 .head-container .search-form {
 	border: none;
+	padding-top: 30px;
 }
 
 .search-form-wrapper {
