@@ -2,9 +2,9 @@
   <div class="row">
     <div class="span8">
       <div class="box-container">
-        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="0" data-cycle-swipe="true" data-cycle-pager="#adv-custom-pager" data-cycle-pager-template='<a href="#" ><img src="{{src}}"></a>' data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow">
         
-          <img alt="image" src="images/01.jpg" class="media-object" />
+          <%= image_tag(@restaurant.image.url(:large)) %>
           
         </div><!-- .cycle-slideshow -->
         <div id="adv-custom-pager"></div>

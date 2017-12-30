@@ -10,6 +10,16 @@ class Restaurant < ApplicationRecord
 	geocoded_by :full_address
 	after_validation :geocode
 
+	has_attached_file :image,
+		:path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+		:url => "/system/:attachment/:id/:style/:filename",
+		:styles => { :small  => "150x150>", :medium => "300x300>", :large => "500x500>"},
+		:default_url => "empty.png"
+
+	validates_attachment_content_type :image,
+		:content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+		#:matches => [/png\Z/, /jpe?g\Z/, /gif\Z/]
+
 	def full_address
 		[address1, address2, city, state, zipcode].join(', ')
 	end

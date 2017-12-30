@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171230081630) do
+ActiveRecord::Schema.define(version: 20171230222658) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(version: 20171230081630) do
     t.float "latitude"
     t.float "longitude"
     t.string "image"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["category_id"], name: "index_restaurants_on_category_id"
   end
 

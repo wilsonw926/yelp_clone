@@ -358,6 +358,12 @@ a.overlay:hover .more {
 	min-height: 340px;
 	background: url('../images/wide.jpg') no-repeat center center;
 }
+
+.cycle-slideshow {
+	padding: 20px 0;
+	text-align: center;
+}
+
 .head-title, .head-message, .header-cta {
 	-moz-animation: fadein 3s; /* Firefox */
     -webkit-animation: fadein 3s; /* Safari and Chrome */
