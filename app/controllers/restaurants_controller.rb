@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      flash['success'] = 'Review has been created succesfully.'
+      flash['success'] = 'Restaurant has been created succesfully.'
       redirect_to @restaurant
     else
       flash[:error] = @restaurant.errors.full_messages.to_sentence
