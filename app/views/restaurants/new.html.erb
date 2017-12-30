@@ -4,7 +4,7 @@
       <div class="box-container">
         <div class="padding30">
           <div class="white-box">
-          <h2 class="page-title">Write a Review</h2>
+          <h2 class="page-title">Add a Restaurant</h2>
 
             <%= form_for @restaurant do |f| %>
               <%= f.label :name%>
@@ -17,11 +17,11 @@
               <%= f.label :address2%>
               <%= f.text_field :address2%>
               <%= f.label :city%>
-              <%= f.text_field :city%>
+              <%= f.text_field :city, placeholder: "Castro Valley"%>
               <%= f.label :state%>
-              <%= f.text_field :state%>
+              <%= f.text_field :state, placeholder: "CA"%>
               <%= f.label :zipcode%>
-              <%= f.text_field :zipcode%>
+              <%= f.text_field :zipcode, placeholder: "94552"%>
               <%= f.label :phone%>
               <%= f.text_field :phone%>
               <%= f.label :email%>

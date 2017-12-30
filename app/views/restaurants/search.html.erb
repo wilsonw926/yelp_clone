@@ -1,0 +1,56 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="span12">
+      <div class="row">
+        <% if @restaurants.blank? %>
+          <h3>Couldn't find a restaurant with your search criteria.</h3>
+        <% else %>
+          <%= @restaurants.each do |restaurant| %>
+            <div class="span4 box-container">
+              <div class="holder">
+                <a class="overlay" href="#" title="property title">
+                  <span class="more"></span>
+                  <img alt="image" class="media-object" src="images/01.jpg" />
+                </a>
+                <span class="prop-tag">For Sale</span>
+                <div class="prop-info">
+                  <h3 class="prop-title"><%= link_to restaurant.name, restaurant %></h3>
+                  <ul class="more-info clearfix">
+                    <li class="info-label clearfix"><span class="pull-left">Phone:</span>
+                      <span class="qty pull-right"><%= restaurant.phone %></span></li>
+                    <li class="info-label clearfix"><span class="pull-left">Location:</span>
+                      <span class="qty pull-right"><%= restaurant.city.upcase %>, <%= restaurant.state.upcase%></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <!-- .span4 .box-container -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .span12 -->
+  </div>
+  <!-- .row -->
+</div>
+<!-- .container -->
+<div class="container">
+  <div class="row">
+    <div class="span12 box-container">
+      <div class="row adv-message clearfix">
+        <div class="pull-left span7">
+          <p class="upper-line serif italic">Realto xHTML/CSS Template is The
+            Best Solution To Sell House Online</p>
+          <p class="lower-line">This template is appropriate for Real Estate
+            Company, who need to do their business online via websites.</p>
+        </div>
+        <!-- .pull-left -->
+        <a class="pull-right btn btn-large btn-realto span3" href="#" title="Buy It Now">Buy
+          It Now!</a>
+      </div>
+      <!-- .adv-message  -->
+    </div>
+  </div>
+</div>
+ 

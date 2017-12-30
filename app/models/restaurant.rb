@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
 	end
 
 	def self.search(params)
-		restaurants = Restaurant.all
+		restaurants = Restaurant.where(category_id: params[:category].to_i)
 		restaurants = restaurants.where("name like ? or description like ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
 		restaurants = restaurants.near(params[:location], 20) if params[:location].present?
 		return restaurants
