@@ -71,7 +71,7 @@
     <div class="span4">
       <div class="widget map box-container padding30">
         <h3 class="widget-title">Map &amp; Directions</h3>
-        <iframe src="http://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=miami+beach+collins+ave+1220&amp;aq=&amp;sll=25.861386,-80.120888&amp;sspn=0.205136,0.347786&amp;ie=UTF8&amp;hq=&amp;hnear=1220+Collins+Ave,+Miami+Beach,+Miami-Dade,+Florida+33139,+Stati+Uniti&amp;t=m&amp;z=14&amp;ll=25.783255,-80.131265&amp;output=embed"></iframe>
+        <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@restaurant.latitude}%2C#{@restaurant.longitude}&zoom=15&size=400x400&maptype=roadmap&markers=color:red%7C%7C#{@restaurant.latitude}%2C#{@restaurant.longitude}&key=AIzaSyCCkGQKWYTW0Qu3KWkDlfFqaymXYzX9nqw" %>
       </div>
       <div class="agent-box widget box-container clearfix padding30">
         <div class="">
