@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   match '/about_us', to: 'pages#about_us', via: :get
   match '/contact_us', to: 'pages#contact_us', via: :get
+  match '/american', to: 'pages#american', via: :get
+  match '/asian', to: 'pages#asian', via: :get
+  match '/italian', to: 'pages#italian', via: :get
 end

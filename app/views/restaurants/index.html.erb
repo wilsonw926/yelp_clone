@@ -96,7 +96,7 @@
       <div class="span4">
         <div class="info-box">
           <h2 class="secion-title">Italian</h2>
-          <% @restaurants.limit(5).each do |restaurant| %>
+          <% @italian_restaurants.limit(5).each do |restaurant| %>
             <ul class="more-info clearfix">
               <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
                 <% if restaurant.reviews.present? %>
@@ -107,13 +107,13 @@
               </li>
             </ul>
           <% end %>
-          <a class="serif italic" href="#" title="Continue">Continue &raquo;</a>
+          <%= link_to "Continue &raquo".html_safe, italian_path %>
         </div>
       </div>
       <div class="span4">
         <div class="info-box">
           <h2 class="secion-title">Asian</h2>
-          <% @restaurants.limit(5).each do |restaurant| %>
+          <% @asian_restaurants.limit(5).each do |restaurant| %>
             <ul class="more-info clearfix">
               <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
                 <% if restaurant.reviews.present? %>
@@ -124,13 +124,13 @@
               </li>
             </ul>
           <% end %>
-          <a class="serif italic" href="#" title="Continue">Continue &raquo;</a>
+          <%= link_to "Continue &raquo".html_safe, asian_path %>
         </div>
       </div>
       <div class="span4">
         <div class="info-box">
           <h2 class="secion-title">American</h2>
-          <% @restaurants.limit(5).each do |restaurant| %>
+          <% @american_restaurants.limit(5).each do |restaurant| %>
             <ul class="more-info clearfix">
               <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
                 <% if restaurant.reviews.present? %>
@@ -141,7 +141,7 @@
               </li>
             </ul>
           <% end %>
-          <a class="serif italic" href="#" title="Continue">Continue &raquo;</a>
+          <%= link_to "Continue &raquo".html_safe, american_path %>
         </div>
       </div>
     </div>

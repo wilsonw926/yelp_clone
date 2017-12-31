@@ -2,6 +2,9 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
   def index
     @restaurants = Restaurant.all
+    @italian_restaurants = Restaurant.where(category_id: 4)
+    @asian_restaurants = Restaurant.where(category_id: 2)
+    @american_restaurants = Restaurant.where(category_id: 1)
   end
 
   def new
