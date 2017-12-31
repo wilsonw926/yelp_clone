@@ -13,7 +13,7 @@ class Restaurant < ApplicationRecord
 	has_attached_file :image,
 		:path => ":rails_root/public/system/:attachment/:id/:style/:filename",
 		:url => "/system/:attachment/:id/:style/:filename",
-		:styles => { :small  => "150x150>", :medium => "300x300>", :large => "500x500>"},
+		:styles => { :small  => "150x150", :medium => "300x300", :large => "500x500"},
 		:default_url => "empty.png"
 
 	validates_attachment_content_type :image,
