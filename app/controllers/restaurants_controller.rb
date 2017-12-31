@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
   def index
-    
+    @restaurants = Restaurant.all
   end
 
   def new
@@ -30,7 +30,11 @@ class RestaurantsController < ApplicationController
   end
 
   def search
-    @restaurants = Restaurant.search(params)
+    if params[:category].blank?
+      @restaurants = Restaurant.all
+    else
+      @restaurants = Restaurant.search(params)
+    end
   end
 
   private
