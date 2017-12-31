@@ -10,7 +10,12 @@
         <div id="adv-custom-pager"></div>
         <div class="clearfix">
           <div class="clearfix padding30">
-            <h2 class="prop-title pull-left margin0"><%= @restaurant.name %></h2>
+            <h2 class="prop-title pull-left margin0"><%= @restaurant.name %>
+              <% if current_user.try(:admin?) %>
+                <small><%= link_to "Edit", edit_restaurant_path, class: "btn btn-primary btn-mini" %></small>
+              <% else %>
+              <% end %>
+            </h2>
             <span class="prop-price pull-right serif italic">Rating: <%= @avg_rating %></span>
           </div>
           <div class="clearfix padding030 row-fluid">

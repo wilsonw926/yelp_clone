@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new]
-  
+  before_action :authenticate_user!, only: [:create, :new, :edit, :update]
+  before_action :is_admin?, only: [:edit, :update]
+
   def index
     #Testing Purposes
     visitor_latitude = 37.875356
@@ -48,10 +49,27 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params)
+    redirect_to @restaurant
+  end
+
   private
     def restaurant_params
       params.require(:restaurant).permit(:name, :description, :category_id, :address1, :address2,
                          :city, :state, :zipcode, :phone, :email, :image)
+    end
+
+    def is_admin?
+      if !current_user.try(:admin?)
+        flash[:danger] = "You are not authorized to do this action."
+        redirect_to root_path
+      end
     end
 
 end
