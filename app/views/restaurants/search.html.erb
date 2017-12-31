@@ -8,6 +8,12 @@
           <% @restaurants.each do |restaurant| %>
             <div class="span4 box-container">
               <div class="holder">
+                <a class="overlay" href="#" title="property title">
+                  <span class="more"></span>
+                  <div class="cycle-slideshow">
+                    <%= link_to image_tag(restaurant.image.url(:medium)), restaurant %>
+                  </div>
+                </a>
                 <div class="prop-info">
                   <h3 class="prop-title"><%= link_to restaurant.name, restaurant %></h3>
                   <ul class="more-info clearfix">
