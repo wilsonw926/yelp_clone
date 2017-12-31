@@ -67,7 +67,11 @@
                         <%= link_to image_tag(restaurant.image.url(:medium)), restaurant %>
                       </div>
                     </a>
-                    <span class="prop-tag">For Sale</span>
+                    <% if restaurant.reviews.present? %>
+                      <span class="qty pull-right star-rating">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
+                    <% else %>
+                      <span class="prop-tag">No Reviews Yet!</span>
+                    <% end %>
                     <div class="prop-info">
                       <h3 class="prop-title"><%= link_to restaurant.name, restaurant%></h3>
                       <ul class="more-info clearfix">
