@@ -78,105 +78,23 @@
         <h3 class="widget-title">Map &amp; Directions</h3>
         <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@restaurant.latitude}%2C#{@restaurant.longitude}&zoom=15&size=400x400&maptype=roadmap&markers=color:red%7C%7C#{@restaurant.latitude}%2C#{@restaurant.longitude}&key=AIzaSyCCkGQKWYTW0Qu3KWkDlfFqaymXYzX9nqw" %>
       </div>
-      <div class="agent-box widget box-container clearfix padding30">
-        <div class="">
-          <div class="pull-left">
-            <img alt="image" class="media-object agent-avatar" src="images/agent-01.jpg" />
-          </div>
-          <div class="pull-left">
-            <h3>Contact Agent</h3>
-            <ul>
-              <li>John Doe</li>
-              <li><a href="#">john.doe@realto.com</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- .agent-box -->
+      
       <div class="search-form widget">
-        <p>Find your new home</p>
-        <form action="#" class="row-fluid" method="post" />
-          <select class="span12 select" name="type">
-            <option />Location
-            <option value="#" />New York
-            <option value="#" />Los Angeles
-            <option value="#" />Washington
-            <option value="#" />Chicago
-            <option value="#" />Miami
-          </select>
-          <select class="span12 select" name="type">
-            <option />Property Type
-            <option value="#" />Any
-            <option value="#" />Single Family Home
-            <option value="#" />Condo
-            <option value="#" />Apartment
-            <option value="#" />Loft
-          </select>
-          <select class="span6 select pull-left" name="beds">
-            <option />Beds
-            <option value="#" />1+ Beds
-            <option value="#" />2+ Beds
-            <option value="#" />3+ Beds
-            <option value="#" />4+ Beds
-            <option value="#" />5+ Beds
-          </select>
-          <select class="span6 select pull-right" name="baths">
-            <option />Baths
-            <option value="#" />1+ Baths
-            <option value="#" />2+ Baths
-            <option value="#" />3+ Baths
-            <option value="#" />4+ Baths
-            <option value="#" />5+ Baths
-          </select>
-          <select class="span12 select clearfix" name="status">
-            <option />Select Status
-            <option value="#" />For Rent
-            <option value="#" />For Sale
-          </select>
-          <select class="span6 select pull-left" name="price-from">
-            <option />Price from
-            <option value="#" />from $100.000
-            <option value="#" />from $200.000
-            <option value="#" />from $300.000
-            <option value="#" />from $400.000
-            <option value="#" />from $500.000
-          </select>
-          <select class="span6 select pull-right" name="price-to">
-            <option />Price to
-            <option value="#" />to $100.000
-            <option value="#" />to $200.000
-            <option value="#" />to $300.000
-            <option value="#" />to $400.000
-            <option value="#" />to $500.000
-          </select>
-          <div class="clearfix">
-            <button class="btn pull-right span6 btn-realto-form btn-large" type="submit">Search</button>
-          </div>
-        </form>
+        <p>Find a Great Restaurant</p>
+        <%= form_tag search_restaurants_path, method: :get do |f| %>
+          <p>Keywords</p>
+          <%= text_field_tag :search, nil, placeholder: "Steaks, Burgers, Hot Dogs, etc." %>
+          <p>Location</p>
+          <%= text_field_tag :location, nil, placeholder: "Berkeley, Miami, etc." %>
+          <p>Category</p>
+          <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+          <%= submit_tag 'Search', class: "btn span2 btn-realto-form btn-large" %>
+        <%end%>       
       </div>
       <!-- .search-form -->
     </div>
     <!-- .span4 -->
   </div>
   <!-- .row -->
-</div>
-<!-- .container -->
-<div class="container">
-  <div class="row">
-    <div class="span12 box-container">
-      <div class="row adv-message clearfix">
-        <div class="pull-left span7">
-          <p class="upper-line serif italic">Realto xHTML/CSS Template is The
-            Best Solution To Sell House Online</p>
-          <p class="lower-line">This template is appropriate for Real Estate
-            Company, who need to do their business online via websites.</p>
-        </div>
-        <!-- .pull-left -->
-        <a class="pull-right btn btn-large btn-realto span3" href="#" title="Buy It Now">Buy
-          It Now!</a>
-      </div>
-      <!-- .adv-message  -->
-    </div>
-  </div>
 </div>
  
