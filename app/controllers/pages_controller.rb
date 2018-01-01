@@ -18,4 +18,16 @@ class PagesController < ApplicationController
 		@asian_restaurants = Restaurant.where(category_id: 2)
 	end
 
+	def mexican
+		@mexican_restaurants = Restaurant.where(category_id: 6)
+	end
+
+	def mediterranean
+		@mediterranean_restaurants = Restaurant.where(category_id: 5)
+	end
+
+	def french
+		@french_restaurants = Restaurant.where(category_id: 3)
+	end
+
 end

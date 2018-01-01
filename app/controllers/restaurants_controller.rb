@@ -14,6 +14,9 @@ class RestaurantsController < ApplicationController
     @italian_restaurants = Restaurant.where(category_id: 4).near([visitor_latitude, visitor_longitude], 20)
     @asian_restaurants = Restaurant.where(category_id: 2).near([visitor_latitude, visitor_longitude], 20)
     @american_restaurants = Restaurant.where(category_id: 1).near([visitor_latitude, visitor_longitude], 20)
+    @mexican_restaurants = Restaurant.where(category_id: 6).near([visitor_latitude, visitor_longitude], 20)
+    @mediterranean_restaurants = Restaurant.where(category_id: 5).near([visitor_latitude, visitor_longitude], 20)
+    @french_restaurants = Restaurant.where(category_id: 3).near([visitor_latitude, visitor_longitude], 20)
   end
 
   def new

@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   match '/american', to: 'pages#american', via: :get
   match '/asian', to: 'pages#asian', via: :get
   match '/italian', to: 'pages#italian', via: :get
+  match '/french', to: 'pages#french', via: :get
+  match '/mexican', to: 'pages#mexican', via: :get
+  match '/mediterranean', to: 'pages#mediterranean', via: :get
 end

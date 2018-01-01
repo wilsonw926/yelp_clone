@@ -68,7 +68,7 @@
                       </div>
                     </a>
                     <% if restaurant.reviews.present? %>
-                      <span class="qty pull-right star-rating">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
+                      <span class="prop-tag">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
                     <% else %>
                       <span class="prop-tag">No Reviews Yet!</span>
                     <% end %>
@@ -146,6 +146,57 @@
             </ul>
           <% end %>
           <%= link_to "Continue &raquo".html_safe, american_path %>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="info-box">
+          <h2 class="secion-title">French</h2>
+          <% @french_restaurants.limit(5).each do |restaurant| %>
+            <ul class="more-info clearfix">
+              <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
+                <% if restaurant.reviews.present? %>
+                  <span class="qty pull-right star-rating">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
+                <% else %>
+                  <span class="qty pull-right">No reviews yet!</span>
+                <% end %>
+              </li>
+            </ul>
+          <% end %>
+          <%= link_to "Continue &raquo".html_safe, french_path %>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="info-box">
+          <h2 class="secion-title">Mexican</h2>
+          <% @mexican_restaurants.limit(5).each do |restaurant| %>
+            <ul class="more-info clearfix">
+              <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
+                <% if restaurant.reviews.present? %>
+                  <span class="qty pull-right star-rating">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
+                <% else %>
+                  <span class="qty pull-right">No reviews yet!</span>
+                <% end %>
+              </li>
+            </ul>
+          <% end %>
+          <%= link_to "Continue &raquo".html_safe, mexican_path %>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="info-box">
+          <h2 class="secion-title">Mediterranean</h2>
+          <% @mediterranean_restaurants.limit(5).each do |restaurant| %>
+            <ul class="more-info clearfix">
+              <li class="info-label clearfix"><%= link_to restaurant.name, restaurant %>
+                <% if restaurant.reviews.present? %>
+                  <span class="qty pull-right star-rating">Rating: <%= restaurant.reviews.average(:rating).round(2) %></span>
+                <% else %>
+                  <span class="qty pull-right">No reviews yet!</span>
+                <% end %>
+              </li>
+            </ul>
+          <% end %>
+          <%= link_to "Continue &raquo".html_safe, mediterranean_path %>
         </div>
       </div>
     </div>
