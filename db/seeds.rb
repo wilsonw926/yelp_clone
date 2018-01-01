@@ -70,6 +70,13 @@ Review.create(comment: "Cheeseboard is a must go restaurant in Berkeley. Their p
 Review.create(comment: "Pasta is super good. Calzones are super huge. Recommend getting Godfather's Favorite.", rating: 4, restaurant_id: 13, user_id: 1)
 Review.create(comment: "Burritos are very filling, recommend the California Burrito. Nothing really special. Free chips thought.", rating: 3, restaurant_id: 19, user_id: 1)
 Review.create(comment: "Nicer looking Taco Bell restaurant than your usual fast food restaurant. Get the Cinnabon Delights.", rating: 4, restaurant_id: 20, user_id: 1)
-Review.create(comment: "Decent.", rating: 4, restaurant_id: 12, user_id: 1)
+Review.create(comment: "Decent.", rating: 4, restaurant_id: 22, user_id: 1)
+
 #Aaron's Reviews
+Review.create(comment: "I always eat at Eureka during happy hour. Best Fries!", rating: 5, restaurant_id: 1, user_id: 2)
+Review.create(comment: "This is where I used to go after celebrating a W. Always get the pad see ew. It ain't ew.", rating: 5, restaurant_id: 5, user_id: 2)
+Review.create(comment: "If you haven't eaten at Cheeseboard, then what are you doing with your life. Get yourself some of the most delicious pizza here right now!", rating: 5, restaurant_id: 12, user_id: 2)
+Review.create(comment: "Gross.", rating: 1, restaurant_id: 21, user_id: 2)
+
+
 
