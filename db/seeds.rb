@@ -10,7 +10,7 @@ mexican = Category.where(name: "Mexican").first_or_create(name: "Mexican")
 #------- USERS SECTION -------
 #User Creation - Admin and Nonadmin
 users = [User.new(email: "wilsonw926@berkeley.edu", password: "password", password_confirmation: "password", first_name: "Wilson", last_name: "Wang", admin: true),
-		 User.new(email: "user@berkeley.edu", password: "password", password_confirmation: "password", first_name: "Aaron", last_name: "Rodgers", admin: false)
+		 User.new(email: "user@berkeley.edu", password: "password", password_confirmation: "password", first_name: "Aaron", last_name: "Rodgers")
 		]
 users.each do |u|
 	u.save!
